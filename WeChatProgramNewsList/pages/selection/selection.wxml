@@ -1,8 +1,0 @@
-<view class='mapWrap'>
-  <map longitude="{{points.longitude}}" latitude="{{points.latitude}}" scale="20" skew="40" enable-3D show-location markers="{{markers}}">
-  </map>
-
-  <cover-view class='btn' bindtap="handleMap">
-    <cover-view class='con' wx:for='{{tabbar}}' wx:key='{{index}}' data-event="{{item.event}}">{{item.name}}</cover-view>
-  </cover-view>
-</view>

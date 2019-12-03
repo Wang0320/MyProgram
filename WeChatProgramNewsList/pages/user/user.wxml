@@ -1,7 +1,0 @@
-<view class="UCenter-bg">
-  <image src="{{hasLogin?UserInfo.avatarUrl:userHead}}" bindtap="getUserInfo" class="png" mode="widthFix"></image>
-  <view class="margin-top-sm">
-    <text>{{hasLogin?UserInfo.nickName:'点击头像登录'}}</text>
-  </view>
-  <image src="" mode="scaleToFill" class="gif-wave"></image>
-</view>
