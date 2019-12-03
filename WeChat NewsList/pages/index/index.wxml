@@ -1,0 +1,49 @@
+<view class="hdSearch">
+  <view style="height:{{StatusBar}}px">
+  </view>
+  <view class="searchWrap">
+    <view class="release">
+      <image src="../../static/images/xiangji.png" />
+      <text>发布</text>
+    </view>
+    <view class="search">
+      <image src="../../static/images/sousuo.png" />
+      <input placeholder="今天猪肉价格|诺贝尔奖获得者" />
+    </view>
+  </view>
+</view>
+
+<view class="main" style="margin-top:{{mtop}}px;">
+  <scroll-view scroll-x class="bg-white nav" scroll-with-animation scroll-left="{{scrollLeft}}">
+    <view class="cu-item {{index==TabCur?'text-green cur':''}}" wx:for="{{navList}}" wx:key bindtap="tabSelect" data-index="{{index}}" data-title="{{item.name}}" data-channelId="{{item.channelId}}">
+      {{item.name}}
+    </view>
+  </scroll-view>
+
+  <view class="news" wx:for="{{newsList}}" wx:key="{{index}}" bindtap="handleNavToNewsDetail" data-id="{{item.id}}">
+    <view class="flex" wx:if="{{item.imageurls.length==1}}">
+      <view class="title">{{item.title}}</view>
+      <image class="newsImg" src="{{item.imageurls[0].url}}" />
+    </view>
+
+    <!-- <view class="flex" wx:elif="{{item.imageurls.length==2}}">
+      <view class="title">{{item.title}}</view>
+      <view class="newsImgList FlexLeft">
+        <image class="newsImg" wx:for="{{item.imageurls}}" wx:if="{{index<3}}" wx:key="{{index}}" src="{{item.url}}" />
+      </view>
+    </view> -->
+
+    <view wx:else>
+      <view class="title">{{item.title}}</view>
+      <view class="newsImgList">
+        <image class="newsImg" wx:for="{{item.imageurls}}" wx:if="{{index<3}}" wx:key="{{index}}" src="{{item.url}}" />
+      </view>
+    </view>
+
+    <view class="newsInfo">
+      <text class="channelName">{{item.channelName}}</text>
+      <text class="source">{{item.source}}</text>
+      <text class="pubDate">{{item.pubDate}}</text>
+    </view>
+  </view>
+</view>
