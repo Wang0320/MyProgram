@@ -1,0 +1,111 @@
+/* 导航栏总体 */
+
+.hdSearch {
+  position: relative;
+  height: 150rpx;
+  background-color: #d94446;
+}
+
+/* 导航栏发布按钮部分 */
+
+.hdSearch .searchWrap {
+  position: absolute;
+  bottom: 20rpx;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100vw;
+}
+
+.hdSearch .searchWrap .release {
+  width: 50rpx;
+  height: 75rpx;
+}
+
+.hdSearch .release image {
+  height: 55%;
+}
+
+.hdSearch .searchWrap text {
+  color: #fff;
+  font-size: 24rpx;
+}
+
+/* 导航栏搜索框部分 */
+
+.hdSearch .searchWrap .search {
+  display: flex;
+  justify-content: space-between;
+  height: 75rpx;
+  width: 80%;
+  background-color: #fff;
+  border-radius: 10rpx;
+  overflow: hidden;
+}
+
+.searchWrap .search image {
+  width: 75rpx;
+  height: 75rpx;
+}
+
+.searchWrap .search input {
+  flex: 1;
+  height: 100%;
+}
+
+/* 主体部分 */
+
+.main {
+	margin-top: 0;
+  transition: 0.3s;
+}
+
+.nav {
+  height: 90rpx;
+}
+
+.news {
+  margin: 10rpx auto;
+  padding: 15rpx 0 15rpx 0;
+  width: 90vw;
+  border-bottom: 1rpx solid #ccc;
+}
+
+.news .title {
+  font-size: 35rpx;
+  font-weight: bold;
+}
+
+.news .newsImgList {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+.news .FlexLeft {
+  justify-content: left;
+}
+
+.news .newsImg {
+  width: 220rpx;
+  height: 120rpx;
+  border-radius: 10rpx;
+}
+
+.news .newsInfo {
+  margin-top: 20rpx;
+}
+
+.news text {
+  margin-right: 10rpx;
+  font-size: 25rpx;
+  color: #666;
+}
+
+.news .channelName {
+  color: #f00;
+}
+
+.news .flex .title {
+  width: 70%;
+}
